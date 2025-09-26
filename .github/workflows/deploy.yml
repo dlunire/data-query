@@ -1,0 +1,59 @@
+name: 🚀 Desplegando Radiolemas
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      # ---------- NODE / SVELTE ----------
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22' # o la versión que uses en tu proyecto
+      
+      - name: Compilando frontend
+        run: |
+          cd frontend
+          npm install
+          npm run build
+
+      # ---------- PHP / COMPOSER ----------
+      - name: Configurar PHP con Composer
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3' # o la que uses en tu server
+          tools: composer
+
+      - name: Instalar dependencias PHP
+        run: composer install --no-dev --optimize-autoloader
+
+      # ---------- DEPLOY ----------
+      - name: Estableciendo acceso SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/radiolemas
+          chmod 600 ~/.ssh/radiolemas
+          ssh-keyscan -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Desplegando aplicación con rsync
+        run: |
+          echo "Iniciando despliegue en radiolemas.com"
+          eval $(ssh-agent -s)
+          ssh-add ~/.ssh/radiolemas
+          rsync -ravz \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='node_modules/' \
+            --exclude='tests/' \
+            -e "ssh -p ${{ secrets.SSH_PORT }}" \
+            --timeout=60 \
+            ./ \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:apps/radiolemas/dev

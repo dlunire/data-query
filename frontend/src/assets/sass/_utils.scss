@@ -1,0 +1,159 @@
+@use "sass:color";
+
+/// Permite establecer el color y transparencia del borde inyectando la propiedad personalizada
+/// `--border-color`.
+/// 
+/// @param {Number} $alpha [0.4] - Esteblece el canal alfa o transparencia del borde.
+/// @param {type} $color [black] - establece el color del borde.
+/// @output 
+@mixin border-color($alpha: 0.4, $color: black) {
+    --border-color: #{rgba($color, $alpha)};
+}
+
+///
+/// Aplica un borde configurable en todos los lados o en una dirección específica.
+/// El color se gestiona a través de la variable CSS `--border-color` configurada por el mixin `border-color`.
+///
+/// @param {Number} $border [1px] - Grosor del borde.
+/// @param {Number} $alpha [0.4] - Nivel de opacidad para el color del borde.
+/// @param {Color} $color [black] - Color base del borde.
+/// @param {String} $direction ["all"] - Dirección en la que se aplicará el borde.
+///   - `"all"`: todos los lados.
+///   - `"left"`: solo borde izquierdo.
+///   - `"right"`: solo borde derecho.
+///   - `"top"`: solo borde superior.
+///   - `"bottom"`: solo borde inferior.
+///   - `"x"`: bordes izquierdo y derecho.
+///   - `"y"`: bordes superior e inferior.
+/// @output Estilos CSS que aplican `border-width`, `border-style` y `border-color` según la dirección indicada.
+///
+/// @example scss - Borde en todos los lados
+///   .box {
+///     @include border(2px, 0.7, red, "all");
+///   }
+///
+/// @example css - Resultado
+///   .box {
+///     border-width: 2px;
+///     border-style: solid;
+///     border-color: rgba(255, 0, 0, 0.7);
+///   }
+///
+/// @example scss - Borde solo en la parte inferior
+///   .underline {
+///     @include border(3px, 1, blue, "bottom");
+///   }
+///
+/// @example css - Resultado
+///   .underline {
+///     border-bottom-width: 3px;
+///     border-bottom-style: solid;
+///     border-bottom-color: rgba(0, 0, 255, 1);
+///   }
+/// @output
+@mixin border($border: 1px, $alpha: 0.4, $color: black, $direction: "all") {
+    @include border-color($alpha, $color);
+
+    @if $direction =="all" {
+        border-width: $border;
+        border-style: solid;
+        border-color: var(--border-color);
+    }
+
+    @else if $direction =="left" {
+        border-left-width: $border;
+        border-left-style: solid;
+        border-left-color: var(--border-color);
+    }
+
+    @else if $direction =="right" {
+        border-right-width: $border;
+        border-right-style: solid;
+        border-right-color: var(--border-color);
+    }
+
+    @else if $direction =="top" {
+        border-top-width: $border;
+        border-top-style: solid;
+        border-top-color: var(--border-color);
+    }
+
+    @else if $direction =="bottom" {
+        border-bottom-width: $border;
+        border-bottom-style: solid;
+        border-bottom-color: var(--border-color);
+    }
+
+    @else if $direction =="x" {
+        border-left-width: $border;
+        border-left-style: solid;
+        border-left-color: var(--border-color);
+
+        border-right-width: $border;
+        border-right-style: solid;
+        border-right-color: var(--border-color);
+    }
+
+    @else if $direction =="y" {
+        border-top-width: $border;
+        border-top-style: solid;
+        border-top-color: var(--border-color);
+
+        border-bottom-width: $border;
+        border-bottom-style: solid;
+        border-bottom-color: var(--border-color);
+    }
+}
+
+
+/// Establece el color en la variable personalizada `--background`.
+/// 
+/// @param {Number} $alpha [1] - Establece el canal alfa. Valores comprendidos entre 0 y 1.
+/// @param {Color} $color [black] - Define el color de fondo.
+/// @output 
+@mixin background-color($alpha: 1, $color: black) {
+    --background: #{rgba($color, $alpha)};
+}
+
+/// Establece el color de texto por medio de `--text-color`.
+/// 
+/// @param {Number} $alpha [1] - Establece el canal alfa del color, es decir, completamente
+///                              transparente con el valor 0 y opaco con 0.
+/// @param {type} $color [black] - El color de texto a escablecer
+/// @output 
+@mixin text-color($alpha: 1, $color: black) {
+    --text-color: #{rgba($color, $alpha)};
+}
+
+/// Establece el color de la marca de agua por medio de `--watermark`.
+/// 
+/// @param {Number} $alpha [1] - Establece el canal alfa del color, es decir, completamente
+///                              transparente con el valor 0 y opaco con 0.
+/// @param {type} $color [black] - El color de la marca de agua a escablecer
+/// @output 
+@mixin watermark-color($alpha: 1, $color: black) {
+    --watermark-color: #{rgba($color, $alpha)};
+}
+
+/// Devuelve el color procesado.
+/// 
+/// @param {Number} $alpha [1] - Canal alfa del color (0 a 1).
+/// @param {type} $color [black] - Color a retornar 
+/// @return {type} -
+@function get-color($alpha: 1, $color: black) {
+    @return rgba($color, $alpha);
+}
+
+/// Oscurece el color base seleccionado.
+/// 
+/// @param {Number} $darken [0%] - Establece el porcentaje con el que se oscurecerá el color.
+/// @param {Color} $color [white] - Color que devolverá por defecto.
+/// @return {Color} -
+@function darken-color($darken: 0%, $color: white) {
+
+    @if $darken < 0 {
+        $darken: $darken * (-1);
+    }
+
+    @return color.adjust($color: $color, $lightness: $darken * (-1));
+}

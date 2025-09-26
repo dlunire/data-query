@@ -1,0 +1,28 @@
+:root {
+    background-color: $background;
+    color: black;
+
+    font: {
+        size: 16px;
+        family: "Open Sans", sans-serif, arial;
+        feature-settings: "liga" 1;
+    }
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+
+    &::before,
+    &::after {
+        box-sizing: inherit;
+    }
+}
+
+a {
+    color: darken(#08d, 10);
+}

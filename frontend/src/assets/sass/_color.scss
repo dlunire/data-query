@@ -1,0 +1,231 @@
+@use "./vars" as *;
+@use "./utils" as *;
+
+.color {
+    color: var(--text-color);
+
+    &--orange {
+        --text-color: orange;
+    }
+
+    &--orangered {
+        --text-color: orangered;
+    }
+
+    &--base-color {
+        --text-color: #{$base-color};
+    }
+}
+
+// Colores en los botones:
+.button {
+    @include border-color(0.3);
+    --button-color: transparent;
+
+    &--list {
+        --fore-color: black;
+        --icon-color: var(--fore-color);
+        @include border-color();
+
+        &:hover {
+            --button-color: #{rgba(black, 0.1)};
+        }
+    }
+
+    &--item {
+        &:hover {
+            @include background-color(0.1);
+            transition: none;
+        }
+
+        &:active {
+            @include background-color(0.15);
+        }
+    }
+
+    &--dialog {
+
+        &-close {
+            &:hover {
+                @include border-color(0.5, red);
+            }
+        }
+    }
+
+    &--table-header {
+        @include background-color(0.1);
+    }
+
+    &--submit {
+        @include background-color(1, #0080d4);
+        --text-color: white;
+
+        &:hover {
+            @include background-color(0.8, #0080d4);
+        }
+
+        &:active {
+            @include background-color($color: #0080d4);
+        }
+    }
+
+    &--login {
+        --text-color: white;
+        
+        &:hover {
+            @include background-color($color: $primary-color);
+        }
+        
+        &, &:active {
+            @include background-color($color: darken-color(10%, $primary-color));
+        }
+    }
+
+    &--primary {
+        --text-color: white;
+
+        &:hover {
+            @include background-color($color: $primary-color);
+        }
+
+        &, &:active {
+            @include background-color($color: darken-color(10%, $primary-color));
+        }
+    }
+
+    &--live {
+        --background: #{darken-color(7)};
+
+        &:hover {
+            --background: #{darken-color(12)};
+        }
+
+        &:active {
+            --background: #{darken-color(15)};
+        }
+    }
+}
+
+.list {
+    --border-color: transparent;
+
+    &__box {
+        @include border-color();
+        --button-color: white;
+    }
+
+    &__item {
+        @include border-color(0.1);
+    }
+}
+
+.form {
+
+    &__input {
+        @include border-color();
+
+        &:focus {
+            @include border-color(0.7);
+        }
+    }
+}
+
+.modal {
+    &-container {
+        @include background-color(1, silver);
+        --text-color: black;
+
+        &__header {
+            --background: black;
+            --text-color: white;
+        }
+    }
+
+    & {
+        @include background-color(1, white);
+        @include border(1px, 0.3);
+    }
+}
+
+.section {
+    --text-color: black;
+
+    &__inner {
+        --text-color: black;
+    }
+
+    &__column {
+
+        &--content {
+            @include border(1px, 0.3);
+        }
+    }
+}
+
+.header {
+    @include background-color(0.05, black);
+}
+
+.form {
+
+    &__buttons {
+
+        &--check {
+            --text-color: black;
+
+        }
+    }
+}
+
+.table {
+    --column-color: white;
+    --text-column-color: black;
+    --column-border-color: #{get-color(1, white)};
+
+    &-container {
+
+        &__header {
+            @include background-color(0.05);
+            @include border($border: 1px, $alpha: 0.1, $direction: "bottom");
+        }
+
+        &__title {
+            --icon-color: black;
+        }
+    }
+}
+
+.footer {
+
+    &--dashboard {
+        @include background-color(0);
+        --text-color: black;
+        --icon-color: var(--text-color);
+    }
+
+    &--install {
+        @include background-color();
+        --text-color: white;
+    }
+}
+
+.windows {
+
+    &__header {
+        @include background-color();
+        --text-color: white;
+    }
+}
+
+.watermark {
+    @include watermark-color(0.1);
+}
+
+.dropzone {
+    @include background-color(0.1);
+    @include text-color();
+}
+
+.profile {
+    --background: #{get-color($color: white)};
+}

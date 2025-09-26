@@ -1,0 +1,228 @@
+@use "sass:color";
+@use "./utils" as *;
+@use "./vars" as *;
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.header {
+
+    &--home {
+        @include background-color(1, white);
+        padding: 0;
+        // border-bottom: 0;
+    }
+
+    &__inner {
+
+        &--home {
+            transition: 300ms ease padding;
+            padding: 12px 0;
+
+            @media screen and (max-width: $media-max-width) {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+
+    &__title {
+
+        &--home {
+            --icon-height: 40px;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--background);
+        height: 40px;
+
+        &--home {
+            @include background-color(1);
+        }
+    }
+}
+
+.live {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    &__title {
+        margin: 0;
+
+        font: {
+            size: 1.2rem;
+        }
+
+        text-transform: uppercase;
+    }
+}
+
+.container {
+
+    &__nav {
+        --icon-color: var(--text-color);
+
+        background: var(--background);
+        color: var(--text-color);
+        position: relative;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+
+        &-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: $max-width;
+            margin: 0 auto;
+            flex-grow: 1;
+            transition: 300ms ease padding;
+
+            @media screen and (max-width: $media-max-width) {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+
+        &--home {
+            --text-color: white;
+            @include background-color();
+        }
+    }
+
+    &__hero {
+        background-color: var(--background);
+
+        min-height: 260px;
+        @include background-color(0.8);
+        background-image: linear-gradient(45deg, get-color(0.9), transparent);
+    }
+}
+
+.menu {
+
+    &--home {
+        display: flex;
+        padding-left: 0;
+        margin: 0;
+        height: auto;
+    }
+
+    &__item {
+
+        &--home {
+            display: flex;
+            position: relative;
+
+            &:not(:first-of-type) {
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    margin: auto;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    height: 70%;
+                    border-left: 1px solid rgba(black, 0.4);
+                    pointer-events: none;
+                }
+            }
+
+        }
+    }
+
+    &__link {
+
+        &--home {
+            display: flex;
+            padding: 0 10px;
+            opacity: 1;
+        }
+    }
+}
+
+.footer {
+
+    &--home {
+        @include background-color();
+        --text-color: white;
+        position: relative;
+    }
+}
+
+.section {
+
+    &--news {
+        padding: 0;
+        border-bottom: 1px solid red;
+        display: flex;
+    }
+
+    &__inner {
+        
+        &--news {
+            padding: 0;
+            flex-grow: 1;
+            display: flex;
+            background-color: silver;
+        }
+    }
+
+    &__title {
+
+        &--news {
+            border-bottom: 1px solid;
+            padding-bottom: 5px;
+        }
+    }
+}
+
+.news {
+    display: flex;
+    flex-grow: 1;
+
+    &__column {
+        @include border-color(0.3);
+        position: relative;
+        background-color: var(--background);
+        padding: 20px;
+
+        &--content {
+            flex-grow: 1;
+        }
+
+        &--sidebar {
+            border-left: 1px solid var(--border-color);
+            @include background-color(0.05);
+            min-width: 360px;
+        }
+    }
+
+    &__content {
+        display: flex;
+
+        &-column {
+            flex-grow: 1;
+
+            &--sidebar {
+                min-width: 50%;
+            }
+        }
+    }
+}

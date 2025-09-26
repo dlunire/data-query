@@ -1,0 +1,134 @@
+@use "sass:color";
+@use "./vars" as *;
+@use "./utils" as *;
+
+main {
+    height: 100vh;
+    overflow: auto;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.form {
+    position: relative;
+
+    &--install {
+        padding: 20px;
+    }
+}
+
+.notification {
+    --background: white;
+    --fore-color: black;
+    
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(black, 0.7);
+    z-index: 30;
+    pointer-events: none;
+    overflow: auto;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+
+
+    @media screen and (max-height: 600px) {
+        align-items: flex-start;
+    }
+
+    &__inner {
+        @include border-color(0.3);
+        background-color: var(--background);
+        color: var(--fore-color);
+        border-radius: 15px;
+        max-width: 450px;
+        width: 100%;
+        pointer-events: all;
+        animation: 300ms ease fade-in forwards;
+        overflow: auto;
+        border: 1px solid var(--border-color);
+        line-height: 1.7;
+        display: flex;
+        flex-direction: column;
+        border-bottom-width: 7px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 2px 2px 0 2px rgba(white, 0.1);
+
+        font: {
+            size: 0.98rem;
+            weight: 400
+        }
+
+        @media screen and (max-width: 500px) {
+            border-radius: 10px 10px 5px 5px;
+            max-width: unset;
+        }
+
+        &--error {
+            @include border-color(0.83, red);
+            box-shadow: 2px 2px 0 2px rgba(red, 0.1);
+        }
+
+        &--success {
+            box-shadow: 2px 2px 0 2px rgba(#0c0, 0.1);
+            @include border-color(0.7, rgb(0, 204, 0));
+        }
+
+        &--warning {
+            box-shadow: 2px 2px 0 2px rgba(#ff0, 0.1);
+            @include border-color(0.96, #ff0);
+        }
+
+        &--info {
+            box-shadow: 2px 2px 0 2px rgba(3, 165, 214, 0.1);
+            @include border-color(0.884, rgb(3, 165, 214));
+        }
+    }
+
+    &__content {
+        position: relative;
+        padding: 20px 30px;
+        overflow: auto;
+        width: 100%;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    &__footer {
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 13px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.p {
+    &-width {
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    &-center {
+        text-align: center;
+    }
+
+    &-color {
+        color: rgba(white, 0.7);
+    }
+}
