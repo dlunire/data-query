@@ -21,19 +21,6 @@
     }
 </script>
 
-<Header bind:home>
-    <h1 class="header__title header__title--home">
-        <IconLogoHeader />
-    </h1>
-
-    <MenuHeader />
-
-    <Live />
-</Header>
-
 <Container dashboard={false} install={false} home={true}>
-    <ContainerNav bind:lema />
-    <section class="container__hero"></section>
-
     <ContainerNews />
 </Container>

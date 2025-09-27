@@ -208,8 +208,7 @@
         }
 
         &--sidebar {
-            border-left: 1px solid var(--border-color);
-            @include background-color(0.05);
+            border-right: 1px solid var(--border-color);
             min-width: 360px;
         }
     }
@@ -223,6 +222,16 @@
             &--sidebar {
                 min-width: 50%;
             }
+        }
+    }
+
+    &__title {
+
+        &-sidebar {
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--border-color);
         }
     }
 }

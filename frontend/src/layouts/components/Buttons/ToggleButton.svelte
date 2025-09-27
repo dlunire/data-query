@@ -9,7 +9,13 @@
 </script>
 
 <div class="toggle-container">
-    <button class="button button--toggle" type="button" aria-label="Toggle" {onclick}></button>
+    <button
+        class="button button--toggle"
+        type="button"
+        aria-label="Toggle"
+        {onclick}
+    >
+    </button>
     <div class="toggle" class:toggle--active={active}></div>
     <span class="label" class:label--active={active}>{label}</span>
 </div>
@@ -24,6 +30,7 @@
         top: 0;
         bottom: 0;
         border-radius: 0;
+        background-color: transparent;
     }
     .toggle {
         &-container {

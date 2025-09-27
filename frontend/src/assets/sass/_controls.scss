@@ -100,6 +100,8 @@
 
     &--list {
         --padding: 20px;
+        --radius: 4px;
+        
         height: 100%;
         flex-grow: 1;
         width: 100%;
@@ -108,6 +110,7 @@
         z-index: 1;
         justify-content: space-between;
         border: 1px solid var(--border-color);
+        transition: 200ms ease;
 
         span {
             text-overflow: ellipsis;
@@ -117,7 +120,7 @@
         svg {
             transform: rotate(-90deg);
             margin-left: 3px;
-            transition: 300ms ease;
+            transition: 200ms ease;
         }
 
         &:hover {
@@ -130,7 +133,7 @@
         }
 
         &[data-open="true"] {
-            --radius: 20px 20px 0 0;
+            --radius: 4px 4px 0 0;
             border-bottom: 0;
 
             svg {
@@ -356,7 +359,7 @@
 
     &--paginate {
         --icon-color: var(--text-color);
-        border: 1px solid  var(--border-color);
+        border: 1px solid var(--border-color);
         background-color: var(--background);
 
         width: 40px;
@@ -494,6 +497,7 @@
 
             &:active {
                 background-color: transparent;
+
                 path {
                     transition: none;
                 }
@@ -580,7 +584,6 @@
         &>span {
             display: block;
             margin-bottom: 5px;
-            padding-left: 20px;
             width: 100%;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -596,9 +599,9 @@
         background-color: var(--input-color);
         color: var(--fore-color);
         border: 1px solid var(--border-color);
-        padding: 0 20px;
+        padding: 0 15px;
         height: 35px;
-        border-radius: 20px;
+        border-radius: 4px;
         width: 100%;
         display: flex;
         text-align: left;

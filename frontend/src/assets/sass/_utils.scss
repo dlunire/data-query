@@ -1,4 +1,6 @@
 @use "sass:color";
+@use "sass:math";
+
 
 /// Permite establecer el color y transparencia del borde inyectando la propiedad personalizada
 /// `--border-color`.
@@ -152,8 +154,12 @@
 @function darken-color($darken: 0%, $color: white) {
 
     @if $darken < 0 {
-        $darken: $darken * (-1);
+        $darken: $darken * -1;
     }
 
-    @return color.adjust($color: $color, $lightness: $darken * (-1));
+    @if math.unit($darken) == '' {
+        $darken: $darken * 1%;
+    }
+
+    @return color.adjust($color: $color, $lightness: -$darken);
 }

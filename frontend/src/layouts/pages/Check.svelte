@@ -56,7 +56,7 @@
             <Form
                 action="/credentials/check"
                 className="form--clase-01 form--clase-02"
-                redirect="/create/user"
+                redirect="/"
                 backredirect="/install/credentials"
                 method="post"
                 bind:loading

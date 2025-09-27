@@ -61,7 +61,7 @@
 
             <p>&nbsp;</p>
             <Form
-                action="/create/user"
+                action="/"
                 className="form--clase-01 form--clase-02"
                 redirect="/login"
                 method="post"

@@ -6,10 +6,7 @@
   let routes: string[] = [
     getFullURL("/install/credentials"),
     getFullURL("/credentials/check"),
-    getFullURL("/create/user"),
-    getFullURL("/login"),
-    getFullURL("/"),
-    getFullURL("/blog")
+    getFullURL("/")
   ];
 </script>
 
