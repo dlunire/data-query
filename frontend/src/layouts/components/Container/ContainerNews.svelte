@@ -1,4 +1,5 @@
 <script lang="ts">
+    import IconSearchRegister from "../../icons/IconSearchRegister.svelte";
     import ButtonList from "../Buttons/ButtonList.svelte";
     import Form from "../Forms/Form.svelte";
 </script>
@@ -13,6 +14,10 @@
 
                 <section class="news__articles">
                     <article class="news__article">
+                        <h3 class="news__subtitle-sidebar">
+                            Buscar por cédula
+                        </h3>
+
                         <Form>
                             {#snippet content()}
                                 <div class="form__inner">
@@ -49,6 +54,83 @@
                                             class="form__input"
                                         />
                                     </label>
+                                </div>
+
+                                <div
+                                    class="form__buttons form__buttons--sidebar"
+                                >
+                                    <button
+                                        class="button button--primary"
+                                        aria-label="Buscar"
+                                    >
+                                        <IconSearchRegister />
+                                        <span>Buscar por cédula</span>
+                                    </button>
+                                </div>
+                            {/snippet}
+                        </Form>
+
+                        <h3 class="news__subtitle-sidebar">
+                            Buscar por nombres
+                        </h3>
+                        <Form>
+                            {#snippet content()}
+                                <div class="form__inner">
+                                    <label for="first-name" class="form__label">
+                                        <span>Primer nombre (opcional):</span>
+                                        <input
+                                            type="text"
+                                            name="first-name"
+                                            id="first-name"
+                                            placeholder="Por ejemplo, Arnold"
+                                            class="form__input"
+                                        />
+                                    </label>
+                                    
+                                    <label for="second-name" class="form__label">
+                                        <span>Segundo nombre (opcional):</span>
+                                        <input
+                                            type="text"
+                                            name="second-name"
+                                            id="second-name"
+                                            placeholder="Por ejemplo, Josue"
+                                            class="form__input"
+                                        />
+                                    </label>
+                                    
+                                    <label for="first-surname" class="form__label">
+                                        <span>Primer apellido (opcional):</span>
+                                        <input
+                                            type="text"
+                                            name="first-surname"
+                                            id="first-surname"
+                                            placeholder="Por ejemplo, Josue"
+                                            class="form__input"
+                                        />
+                                    </label>
+                                    
+                                    <label for="second-surname" class="form__label">
+                                        <span>Segundo apellido (opcional):</span>
+                                        <input
+                                            type="text"
+                                            name="second-surname"
+                                            id="second-surname"
+                                            placeholder="Por ejemplo, Josue"
+                                            class="form__input"
+                                        />
+                                    </label>
+                                </div>
+
+                                <div
+                                    class="form__buttons form__buttons--sidebar"
+                                >
+                                    <button
+                                        class="button button--primary"
+                                        aria-label="Buscar"
+                                    >
+                                        <IconSearchRegister />
+                                        <span>Buscar por nombres</span>
+                                    </button>
                                 </div>
                             {/snippet}
                         </Form>
