@@ -13,8 +13,8 @@ use Framework\Requests\Request;
  * @package DLUnire\Config
  * 
  * @version 0.0.1 (release)
- * @author David E Luna M <davidlunamontilla@gmail.com>
- * @copyright 2023 David E Luna M
+ * @author Códigos del Futuro <davidlunamontilla@gmail.com>
+ * @copyright 2023 Códigos del Futuro
  * @license MIT
  */
 abstract class Controller extends BaseController {

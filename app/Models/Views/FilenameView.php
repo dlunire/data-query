@@ -10,17 +10,17 @@ use DLUnire\Models\DTO\FilenameData;
 
 
 /**
- * Copyright (c) 2025 David E Luna M
+ * Copyright (c) 2025 Códigos del Futuro
  * Licensed under the MIT License. See LICENSE file for details.
  *
  * Vista lógica para la gestión y recuperación de archivos desde la base de datos `dl_filenames`.
  * Permite acceder a archivos públicos o privados, usando su UUIDv4 como identificador.
  * 
- * Este es un proyecto de David E Luna M, DLUnire Framework y Códigos del Futuro (@cdelfuturo).
+ * Este es un proyecto de Códigos del Futuro, DLUnire Framework y Códigos del Futuro (@cdelfuturo).
  *
  * @package DLUnire\Models\Views
  * @version v1.0.0
- * @author David E Luna M
+ * @author Códigos del Futuro
  * @license Propietaria
  *
  * @property-read string $uuid UUIDv4 del archivo

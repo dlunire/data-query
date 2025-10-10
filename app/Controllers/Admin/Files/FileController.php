@@ -14,7 +14,7 @@ use Exception;
 use Framework\Abstracts\BaseController;
 
 /**
- * Copyright (c) 2025 David E Luna M
+ * Copyright (c) 2025 Códigos del Futuro
  * Todos los derechos reservados. Uso restringido bajo licencia comercial.
  *
  * Este controlador gestiona la recepción de archivos enviados desde el cliente
@@ -23,7 +23,7 @@ use Framework\Abstracts\BaseController;
  *
  * @version v0.0.1
  * @package DLUnire\Controllers\Admin\Files
- * @author David E Luna M
+ * @author Códigos del Futuro
  * @license Licencia Comercial – Prohibida su distribución no autorizada
  */
 final class FileController extends BaseController {

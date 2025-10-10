@@ -8,7 +8,7 @@ use DLCore\Database\Model;
 use DLUnire\Models\DTO\CoursesData;
 
 /**
- * Copyright (c) 2025 David E Luna M
+ * Copyright (c) 2025 Códigos del Futuro
  * Licensed under the MIT License. See LICENSE file for details.
  *
  * Clase que representa la tabla `courses` en la base de datos.
@@ -18,7 +18,7 @@ use DLUnire\Models\DTO\CoursesData;
  * @version v0.0.1
  * @package DLUnire\Models\Tables
  * @license MIT
- * @author David E Luna M
+ * @author Códigos del Futuro
  * @copyright Copyright (c) 2025
  */
 final class Courses extends Model {

@@ -13,8 +13,8 @@ use Framework\Auth\SystemCredentials;
  * @package DLUnire
  * 
  * @version 0.0.0
- * @author David E Luna M <davidlunamontilla@gmail.com>
- * @copyright 2023 David E Luna M
+ * @author Códigos del Futuro <davidlunamontilla@gmail.com>
+ * @copyright 2023 Códigos del Futuro
  * @license MIT
  * 
  * Para uso personal

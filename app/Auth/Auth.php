@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Copyright (c) 2025 David E Luna M
+ * Copyright (c) 2025 Códigos del Futuro
  * Licensed under the MIT License. See LICENSE file for details.
  */
 
@@ -28,8 +28,8 @@ use PDOException;
  * @package DLUnire\Auth
  * @version v0.0.1
  * @license Comercial
- * @author David E Luna M
- * @copyright 2025 David E Luna M
+ * @author Códigos del Futuro
+ * @copyright 2025 Códigos del Futuro
  */
 class Auth extends AuthBase {
 

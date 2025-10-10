@@ -8,12 +8,12 @@ use DLCore\Config\DLVarTypes;
 use Exception;
 
 /**
- * Copyright (c) 2025 David E Luna M
+ * Copyright (c) 2025 Códigos del Futuro
  * Todos los derechos reservados.
  *
  * Este archivo forma parte del software comercial protegido del autor.
  * Su uso, copia, modificación o distribución requiere una licencia válida
- * otorgada explícitamente por David E Luna M.
+ * otorgada explícitamente por Códigos del Futuro.
  *
  * No está autorizado su uso sin licencia, ni siquiera con fines académicos
  * o no comerciales. Para más información sobre licencias, visite el repositorio
@@ -22,8 +22,8 @@ use Exception;
  * @version v0.0.1
  * @package DLUnire\Models\DTO
  * @license Licencia Comercial – Todos los derechos reservados
- * @author David E Luna M
- * @copyright 2025 David E Luna M
+ * @author Códigos del Futuro
+ * @copyright 2025 Códigos del Futuro
  *
  * @property string      $uuid           Identificador único del archivo (UUID v4).
  * @property string|null $name           Nombre original del archivo.

@@ -60,6 +60,14 @@
         let data: ResponseServer;
 
         loading = true;
+
+        const params = [];
+
+        for (const key in fields) {
+            const value: FormDataEntryValue = fields[key];
+            console.log({ value, key })
+        }
+
         if (method.toLowerCase() == "get") {
             data = (await request(action, {
                 credentials: "include",

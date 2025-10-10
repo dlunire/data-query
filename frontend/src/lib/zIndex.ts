@@ -11,8 +11,8 @@
  * visualicen por encima de los posteriores.
  *
  * @function zIndexReverse
- * @author David E Luna M
- * @copyright 2025 David E Luna M
+ * @author Códigos del Futuro
+ * @copyright 2025 Códigos del Futuro
  * @returns void No retorna ningún valor. Modifica el DOM directamente.
  */
 export function zIndexReverse(container: HTMLElement): void {

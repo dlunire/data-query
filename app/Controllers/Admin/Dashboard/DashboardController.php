@@ -18,8 +18,8 @@ use Framework\Abstracts\BaseController;
  * @package DLUnire\Controllers\Admin\Dashboard
  * @version v0.0.1
  * @license Comercial
- * @author David E Luna M
- * @copyright Copyright (c) 2025 David E Luna M
+ * @author Códigos del Futuro
+ * @copyright Copyright (c) 2025 Códigos del Futuro
  * @uses \DLUnire\Services\Traits\FrontendTrait
  *
  * @method string index() Retorna el contenido del panel de control del usuario autenticado.

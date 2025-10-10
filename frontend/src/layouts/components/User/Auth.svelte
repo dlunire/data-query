@@ -15,7 +15,7 @@
 
     let top: number = 0;
     let error: boolean = false;
-    let label: string = "David E Luna M";
+    let label: string = "Códigos del Futuro";
     let loadingOpen: boolean = false;
 
     function onclick(event: MouseEvent): void {

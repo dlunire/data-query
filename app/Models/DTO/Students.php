@@ -12,7 +12,7 @@ use DLCore\Config\DLValues;
  * @package DLUnire\Models\DTO
  * @version v0.0.1
  * @license Comercial
- * @author David E Luna M
+ * @author Códigos del Futuro
  * 
  * @property-read string $uuid Identificador único del estudiante.
  * @property-read string $name Nombre del estudiante.

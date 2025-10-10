@@ -7,13 +7,13 @@ namespace DLUnire\Models\DTO;
 use IteratorAggregate;
 
 /**
- * Copyright (c) 2025 David E Luna M
+ * Copyright (c) 2025 Códigos del Futuro
  * Licensed under the MIT License. See LICENSE file for details.
  * 
  * @package DLUnire\Models\DTO
  * @version v0.0.1
  * @license MIT
- * @author David E Luna M
+ * @author Códigos del Futuro
  * 
  * @note Esta clase utiliza snake_case para los nombres de métodos y propiedades. Sin embargo, en el contexto de 
  *       IteratorAggregate, se hizo una excepción.

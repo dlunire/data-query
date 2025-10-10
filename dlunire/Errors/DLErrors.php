@@ -9,8 +9,8 @@ use DLRoute\Requests\DLOutput;
  * @package Framework\Errors
  * 
  * @version 1.0.0 (release)
- * @author David E Luna M <davidlunamontilla@gmail.com>
- * @copyright 2023 David E Luna M
+ * @author Códigos del Futuro <davidlunamontilla@gmail.com>
+ * @copyright 2023 Códigos del Futuro
  * @license MIT
  * 
  */

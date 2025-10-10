@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace DLUnire\Models\DTO;
 
 /**
- * Copyright (c) 2025 David E Luna M
+ * Copyright (c) 2025 Códigos del Futuro
  * Licensed under the MIT License. See LICENSE file for details.
  *
  * Objeto de transferencia de datos (DTO) para exponer la metadata esencial del frontend,
@@ -14,7 +14,7 @@ namespace DLUnire\Models\DTO;
  *
  * @version v0.0.1
  * @package DLUnire\Models\DTO
- * @author David E Luna M
+ * @author Códigos del Futuro
  * @license MIT
  *
  * @property-read string $title       Título del documento o página HTML.

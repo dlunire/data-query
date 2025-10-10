@@ -16,9 +16,9 @@ namespace DLUnire\Errors;
  *
  * @package DLUnire\Errors
  * @version v0.0.1
- * @author David E Luna M
+ * @author Códigos del Futuro
  * @license MIT
- * @copyright Copyright (c) 2025 David E Luna M
+ * @copyright Copyright (c) 2025 Códigos del Futuro
  */
 final class CSVParserException extends \Exception {
 }

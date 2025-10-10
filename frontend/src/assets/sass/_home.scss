@@ -19,7 +19,6 @@
     &--home {
         @include background-color(1, white);
         padding: 0;
-        // border-bottom: 0;
     }
 
     &__inner {
@@ -170,8 +169,9 @@
 
     &--news {
         padding: 0;
-        border-bottom: 1px solid red;
         display: flex;
+        overflow: hidden;
+        position: relative;
     }
 
     &__inner {
@@ -180,14 +180,18 @@
             padding: 0;
             flex-grow: 1;
             display: flex;
-            background-color: silver;
+            position: absolute;
+            margin: auto;
+            left: 0; right: 0;
+            top: 0; bottom: 0;
+            max-width: unset;
         }
     }
 
     &__title {
 
         &--news {
-            border-bottom: 1px solid;
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 5px;
         }
     }
@@ -196,26 +200,39 @@
 .news {
     display: flex;
     flex-grow: 1;
+    position: sticky;
+    top: 0;
+    @include border-color(0.3);
+
+    &--recent {
+        position: absolute;
+        margin: auto;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+        overflow: hidden;
+        height: 100%;
+    }
 
     &__column {
-        @include border-color(0.3);
         position: relative;
         background-color: var(--background);
         padding: 20px;
 
         &--content {
             flex-grow: 1;
+            background-color: darken-color(2);
+            overflow: auto;
         }
 
         &--sidebar {
             border-right: 1px solid var(--border-color);
             min-width: 360px;
+            overflow: auto;
         }
     }
 
     &__content {
         display: flex;
-
         &-column {
             flex-grow: 1;
 
@@ -234,4 +251,26 @@
             border-bottom: 1px solid var(--border-color);
         }
     }
+
+    &__subtitle {
+
+        &-sidebar {
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+    }
+
+    &__articles {
+        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+}
+
+.tabs {
+    display: flex;
+    padding: 0 20px;
 }

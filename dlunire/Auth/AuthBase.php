@@ -11,8 +11,8 @@ use Framework\Config\Token;
  * @package Framework\Auth
  * 
  * @version 1.0.0 (release)
- * @author David E Luna M <contact@dlunire.pro>
- * @copyright 2024 David E Luna M
+ * @author Códigos del Futuro <contact@dlunire.pro>
+ * @copyright 2024 Códigos del Futuro
  * @license MIT
  */
 abstract class AuthBase extends DLAuth {

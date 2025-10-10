@@ -16,9 +16,9 @@ use InvalidArgumentException;
  *
  * @package DLUnire\Services\Traits
  * @version v0.0.1
- * @author David E Luna M
+ * @author Códigos del Futuro
  * @license Comercial
- * @copyright Copyright (c) 2025 David E Luna M
+ * @copyright Copyright (c) 2025 Códigos del Futuro
  * @copyright Copyright (c) 2025 Alvaro Mantilla
  */
 trait FrontendTrait {

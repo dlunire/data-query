@@ -8,7 +8,7 @@ use DLCore\Config\DLVarTypes;
 use TypeError;
 
 /**
- * Copyright (c) 2025 David E Luna M
+ * Copyright (c) 2025 Códigos del Futuro
  * Licensed under the MIT License. See LICENSE file for details.
  *
  * Objeto de Transferencia de Datos (DTO) que representa la estructura de salida
@@ -18,7 +18,7 @@ use TypeError;
  * @version v0.0.1
  * @package DLUnire\Models\DTO
  * @license MIT
- * @author David E Luna M
+ * @author Códigos del Futuro
  * @copyright Copyright (c) 2025
  */
 final class CoursesData {

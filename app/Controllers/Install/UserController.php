@@ -10,15 +10,15 @@ use Exception;
 use Framework\Abstracts\BaseController;
 
 /**
- * Copyright (c) 2025 David E Luna M
+ * Copyright (c) 2025 Códigos del Futuro
  * Licensed under the Comercial. See LICENSE file for details.
  *
  * Controlador responsable de gestionar el formulario y la creación del usuario
  * administrador del sistema durante el proceso de instalación inicial.
  *
  * @package DLUnire\Controllers\Install
- * @author David E Luna M <dlunire@protonmail.com>
- * @copyright 2025 David E Luna M
+ * @author Códigos del Futuro <dlunire@protonmail.com>
+ * @copyright 2025 Códigos del Futuro
  * @license Comercial
  * @version v0.0.1
  */

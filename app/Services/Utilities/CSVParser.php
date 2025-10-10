@@ -15,9 +15,9 @@ use DLUnire\Errors\CSVParserException;
  * 
  * @package DLUnire\Services\Utilities
  * @version v0.1.0
- * @author David E Luna M
+ * @author Códigos del Futuro
  * @license MIT
- * @copyright Copyright (c) 2025 David E Luna M
+ * @copyright Copyright (c) 2025 Códigos del Futuro
  *
  * @property-read string|null $separator Separador detectado en tiempo de construcción
  * @property string|null $content_separator Separador utilizado internamente durante el análisis

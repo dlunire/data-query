@@ -8,8 +8,8 @@ namespace Boot;
  * @package Boot
  * 
  * @version v0.0.1 (release)
- * @author David E Luna M <davidlunamontilla@gmail.com>
- * @copyright 2023 David E Luna M
+ * @author Códigos del Futuro <davidlunamontilla@gmail.com>
+ * @copyright 2023 Códigos del Futuro
  * @license MIT
  */
 interface AuthorizationsInterface {

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Copyright (c) 2025 David E Luna M
+ * Copyright (c) 2025 Códigos del Futuro
  * Licensed under the MIT License. See LICENSE file for details.
  */
 
@@ -25,8 +25,8 @@ use DLStorage\Errors\StorageException;
  * @version v0.0.1
  * @package DLUnire\Models\DTO
  * @license MIT
- * @author David E Luna M
- * @copyright 2025 David E Luna M
+ * @author Códigos del Futuro
+ * @copyright 2025 Códigos del Futuro
  *
  * @property-read string $varname Nombre de la variable de entorno. Debe iniciar con «DL_» y estar en mayúsculas.
  * @property-read string|int|bool $value Valor asociado a la variable, aceptando tipo cadena, número o booleano.
